@@ -16,11 +16,6 @@ module.exports = class extends Generator {
             type    : 'input',
             name    : 'description',
             message : 'Description: '
-          },
-          {
-            type    : 'input',
-            name    : 'gitRepoUrl',
-            message : 'Git Repo URL: '
           }
       ]).then( (answers) => {
         this.fs.copyTpl(
@@ -28,8 +23,7 @@ module.exports = class extends Generator {
             this.destinationPath(answers.name),
             {
                 projectName: answers.name,
-                description: answers.description,
-                gitRepoUrl: answers.gitRepoUrl
+                description: answers.description
             }
           );
       });

@@ -24,6 +24,10 @@ module.exports = class extends Generator {
             {
                 projectName: answers.name,
                 description: answers.description
+            },
+            null,
+            {
+              globOptions: {dot: true}
             }
           );
       });
